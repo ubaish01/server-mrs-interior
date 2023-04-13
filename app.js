@@ -30,7 +30,9 @@ app.use(cors({
 //Imports and routes 
 import otherRoutes from "./routes/Routes.js"
 
-
+app.get("/",(req,res)=>{
+    res.send(`Bckend working fine click <a href=${process.env.FRONTEND_URL}>Here</a> to go to frontend`)
+})
 
 app.use("/api/v1",otherRoutes)
 
